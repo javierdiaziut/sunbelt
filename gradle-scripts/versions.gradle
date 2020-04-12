@@ -21,6 +21,7 @@ ext {
             'androidx_cardview'           : '1.0.0',
             'coroutines'                  : '1.2.1',
             'junit5_runner'               : '0.2.2',
+            'picasso'                     : '2.71828',
             'koin'                        : '2.0.1',
             'legacy_v4'                   : '1.0.0',
             'lifecycle_ext'               : '2.0.0',

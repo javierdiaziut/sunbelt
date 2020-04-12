@@ -11,6 +11,7 @@ import com.demo.sunbelt.data.remote.source.ListDataSource
 import com.demo.sunbelt.data.repository.ListRepository
 import com.demo.sunbelt.domain.usecase.ListUseCase
 import com.demo.sunbelt.presentation.viewmodel.ListViewModel
+import com.squareup.picasso.Picasso
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -71,5 +72,10 @@ val appModule = module {
 
     /* UseCases */
     factory { ListUseCase(get()) }
+
+    /* Picasso */
+    single {
+        Picasso.get()
+    }
 
 }
