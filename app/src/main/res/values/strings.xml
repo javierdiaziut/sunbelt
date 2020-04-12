@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sunbelt</string>
+    <string name="title_list">Listado de noticias</string>
 </resources>

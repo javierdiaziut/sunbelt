@@ -4,7 +4,6 @@ import com.demo.sunbelt.util.AppPreferences
 import okhttp3.Interceptor
 import okhttp3.Response
 
-
 class RefreshAuthTokenInterceptor(
     private val appPreferences: AppPreferences
 ) : Interceptor {

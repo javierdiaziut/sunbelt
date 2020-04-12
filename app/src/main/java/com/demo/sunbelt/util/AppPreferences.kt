@@ -17,6 +17,7 @@ object AppPreferences : KoinComponent {
     private const val CLIENT_SECRET = "client_secret"
     private const val REFRESH_TOKEN = "client_secret"
     private const val IS_LOGGED = "is_logged"
+    const val SHARED_PREFERENCES_NAME = "sunbelt"
 
     var authToken: String?
         get() = preferences.getString(AUTH_TOKEN, AUTH_TOKEN_DEFAULT)

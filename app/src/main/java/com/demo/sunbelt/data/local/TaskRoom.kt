@@ -15,10 +15,6 @@ class TaskRoom(private val taskRoomDao: TaskRoomDao) :
         taskRoomDao.insert(task)
     }
 
-    override fun getAllTasks(): LiveData<List<TaskEntity>> {
-        return taskRoomDao.getAll()
-    }
-
     override fun addTask() {
     }
 

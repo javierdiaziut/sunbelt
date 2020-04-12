@@ -10,11 +10,19 @@ class AuthInterceptor(
     override fun intercept(chain: Interceptor.Chain): Response {
         val original = chain.request()
 
-        val request = if (!AppPreferences.authToken.isNullOrEmpty() && AppPreferences.authToken != AppPreferences.AUTH_TOKEN_DEFAULT) {
-            original.newBuilder().addHeader("Authorization", appPreferences.authToken!!).build()
-        } else {
-            original.newBuilder().build()
-        }
+        val request =
+            if (!AppPreferences.authToken.isNullOrEmpty()
+                && AppPreferences.authToken != AppPreferences.AUTH_TOKEN_DEFAULT
+            ) {
+                original
+                    .newBuilder()
+                    .addHeader("Authorization", appPreferences.authToken!!)
+                    .build()
+            } else {
+                original
+                    .newBuilder()
+                    .build()
+            }
 
         return chain.proceed(request)
     }
